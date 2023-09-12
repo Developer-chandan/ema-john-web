@@ -4,7 +4,12 @@
 
 }
 
+
+
 .cart-container{
     border-left: 2px solid #ddd;
     height: 100vh;
+    position: sticky;
+    top: 0;
+   
 }
