@@ -1,0 +1,10 @@
+.shop_wrap{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+}
+
+.cart-container{
+    border-left: 2px solid #ddd;
+    height: 100vh;
+}
