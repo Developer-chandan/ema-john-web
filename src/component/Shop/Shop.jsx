@@ -19,27 +19,7 @@ const Shop = () => {
         
     },[])
 
-//     useEffect(() =>{
-// const getStoredData = getShoppingCart();
-// const storedCart = [];
 
-// for( const id in getStoredData){
-//     // match the id into total database  
-//     const savedProduct = products.find((product) => product.id == id);
-//     // console.log('product from cart', savedProduct);
-//     // set database quantity with cart quantity 
-//     if (savedProduct){
-//         const savedProductQuantity = getStoredData[id];
-//         savedProduct.quantity = savedProductQuantity;
-//         storedCart.push(savedProduct);
-
-//     }
-
-   
-// }
-// setCart(storedCart);
-//     }, [products])
- 
 
 // To show the data saved data of localStorage on UI 
 // there is 5 steps 
