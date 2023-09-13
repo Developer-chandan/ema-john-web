@@ -1,5 +1,6 @@
 // import React from 'react';
 import PropTypes from 'prop-types';
+import { deleteShoppingCart } from '../../utilities/fakedb';
 
 const Cart = (props) => {
   
@@ -35,6 +36,14 @@ const Cart = (props) => {
                     <p className='mt-5'>Total Shipping Charge: ${totalShipping} </p>
                     <p className='mt-5'>Total Tax: ${tax} </p>
                     <h3 className='mt-5 text-xl'>Grand Total: ${grandTotal} </h3>
+                    <button
+  type="button"
+  onClick = {deleteShoppingCart}
+  className="inline-block rounded mt-4 bg-red-500 w-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)]">
+  Delete Cart
+  
+</button>
+                    
                     
         </div>
     );
