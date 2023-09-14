@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import logo from '../../images/Ema-John.png';
 import './header.css';
 
@@ -11,10 +12,10 @@ const Header = () => {
                 <img src={logo} alt="" className='img-fluid' />
                 </div>
                 <ul className='header_menu'>
-                        <li className="nav-item"><a href="" className="nav-link">Order</a></li>
-                        <li className="nav-item"><a href="" className="nav-link">Order Review</a></li>
-                        <li className="nav-item"><a href="" className="nav-link">Manage Inventoary</a></li>
-                        <li className="nav-item"><a href="" className="nav-link">LogIn</a></li>
+                        <li className="nav-item"><Link to={'/order'} className="nav-link">Order</Link></li>
+                        <li className="nav-item"><Link to={'/review'} className="nav-link">Order Review</Link></li>
+                        <li className="nav-item"><Link to={'/inventory'} className="nav-link">Manage Inventoary</Link></li>
+                        <li className="nav-item"><Link to={'/login'} className="nav-link">LogIn</Link></li>
                 </ul>
                 </div>
             </nav>
