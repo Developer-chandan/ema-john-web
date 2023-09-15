@@ -9,7 +9,7 @@ import Review from "../Review/Review";
 // import { useState } from "react";
 import './order.css'
 import { useState } from "react";
-import { removeFromDb } from "../../utilities/fakedb";
+import { deleteShoppingCart, removeFromDb } from "../../utilities/fakedb";
 
 
 const Order = () => {
@@ -23,6 +23,12 @@ const Order = () => {
        removeFromDb(id);
     }
 
+   
+    const clearAllCart = () =>{
+        setCart([]);
+        deleteShoppingCart();
+    }
+
     return (
         <div>
             <div className="shop_wrap mt-10">
@@ -33,7 +39,7 @@ const Order = () => {
 
                 </div>
                 <div className="cart-container order_page_cart px-4">
-                   <Cart cart={cart}></Cart>
+                   <Cart clearAllCart={clearAllCart}  cart={cart}></Cart>
                   
                 </div>
             </div>

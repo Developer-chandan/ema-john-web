@@ -1,6 +1,5 @@
 // import React from 'react';
 import PropTypes from 'prop-types';
-import { deleteShoppingCart } from '../../utilities/fakedb';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,10 +7,14 @@ const Cart = (props) => {
   
   Cart.propTypes = {
     cart: PropTypes.object.isRequired, // Here, 'cart' is expected to be an object.
-
+    clearAllCart: PropTypes.func.isRequired, // Here, 'cart' is expected to be an object.
+    
   };
 
-  const { cart } = props;
+  const { cart, clearAllCart } = props;
+
+  console.log(props);
+  // const { clearAllCart } = props;
 
   // const [price, setPrice] = useState(0)
 
@@ -49,7 +52,7 @@ const Cart = (props) => {
                     <h3 className='mt-5 text-xl'>Grand Total: ${grandTotal} </h3>
                     <button
   type="button"
-  onClick = {deleteShoppingCart}
+ onClick={clearAllCart}
   className="inline-block rounded mt-4 text-orange-50 bg-red-500 w-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)]">
   Delete Cart
   <FontAwesomeIcon icon={faTrashCan} className='ml-2 text-orange-50'/>

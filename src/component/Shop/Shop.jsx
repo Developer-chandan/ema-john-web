@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import './shop.css';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
-import { addToDb, getShoppingCart } from '../../utilities/fakedb'
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb'
 
 const Shop = () => {
 
@@ -44,7 +44,10 @@ useEffect (() => {
 setCart(storeInCart);
 }, [products])
 
-
+const clearAllCart = () =>{
+    setCart([]);
+    deleteShoppingCart();
+}
 
     const handleaddToCart = (product) =>{
 
@@ -88,7 +91,7 @@ setCart(storeInCart);
 
                 </div>
                 <div className="cart-container px-4">
-                   <Cart cart={cart}></Cart>
+                   <Cart clearAllCart={clearAllCart} cart={cart}></Cart>
                   
                 </div>
             </div>

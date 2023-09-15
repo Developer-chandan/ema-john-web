@@ -18,6 +18,7 @@ const Review = ( product ) => {
                 <h6 className="text-xl text-blue-600">{name}</h6>
                 <p className="">Price: <span className="text-orange-600">${price * quantity}</span></p>
                 <p>Shipping Charge: <span className="text-orange-600">${shipping}</span></p>
+                <p>Quantity: <span className="text-orange-600">{quantity}x</span></p>
             </div>
             <div className="icon">
                 <button onClick={() => removeCartItem(id)} className="pointer">
