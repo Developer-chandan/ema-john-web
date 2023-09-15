@@ -8,22 +8,32 @@ import Review from "../Review/Review";
 // import { getShoppingCart } from "../../utilities/fakedb";
 // import { useState } from "react";
 import './order.css'
+import { useState } from "react";
+import { removeFromDb } from "../../utilities/fakedb";
 
 
 const Order = () => {
-    const cart = useLoaderData();
-// console.log(cart)
+    const savedCart = useLoaderData();
+   const [cart, setCart] = useState(savedCart)
+
+   
+   const removeCartItem = (id) => {
+       const remaining = cart.filter(product => product.id !== id);
+       setCart(remaining)
+       removeFromDb(id);
+    }
+
     return (
         <div>
             <div className="shop_wrap mt-10">
             <div className="review-container">
                   {
-                cart.map(product => <Review key={product.id} product={product}></Review>)
+                cart.map(product => <Review key={product.id} removeCartItem={removeCartItem} product={product}></Review>)
                   }
 
                 </div>
                 <div className="cart-container order_page_cart px-4">
-                   <Cart key={cart.id} cart={cart}></Cart>
+                   <Cart cart={cart}></Cart>
                   
                 </div>
             </div>

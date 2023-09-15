@@ -21,7 +21,7 @@
 
 
 
-.icon span {
+.icon button {
     display: grid;
     width: 55px;
     height: 52px;
@@ -30,10 +30,17 @@
     border-radius: 100%;
     cursor: pointer;
 }
-
-.icon span svg {
+.icon button:active{
+    transform: scale(.7);
+    transition: all .2s;
+}
+.icon button:focus{
+    outline: none;
+}
+.icon button svg {
     font-size: 1.5rem;
     color: #f86262;
+    margin-left: -4px
 }
 
 .icon {
