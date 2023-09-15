@@ -14,17 +14,26 @@ import Order from './component/Oders/Order';
 import Inventory from './component/Inventory/Inventory';
 import Error from './component/Error/Error';
 // import Header from './component/Header/Header';
-import App from './App';
+// import App from './App'; 
+import Home from './component/Layout/Home';
+import Shop from './component/Shop/Shop';
+import getCartData from './component/Loader/getCartData';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element:<Home></Home>,
     children: [
       {
+        path:'/',
+        element: <Shop></Shop>
+      },
+      {
         path:'/order',
-        element: <Order></Order>
+        element: <Order></Order>,
+        loader: getCartData
+
       },
       {
         path:'/review',

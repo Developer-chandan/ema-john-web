@@ -12,6 +12,7 @@ const Header = () => {
                 <img src={logo} alt="" className='img-fluid' />
                 </div>
                 <ul className='header_menu'>
+                        <li className="nav-item"><Link to={'/'} className="nav-link">Home</Link></li>
                         <li className="nav-item"><Link to={'/order'} className="nav-link">Order</Link></li>
                         <li className="nav-item"><Link to={'/review'} className="nav-link">Order Review</Link></li>
                         <li className="nav-item"><Link to={'/inventory'} className="nav-link">Manage Inventoary</Link></li>

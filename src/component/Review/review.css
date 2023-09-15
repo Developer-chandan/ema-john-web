@@ -1,0 +1,43 @@
+.review_product {
+    max-width: 750px;
+    display: flex;
+    margin: .5rem 0;
+    border: 2px solid #fdcdcd;
+    border-radius: 3px;
+}
+
+.review_product img {
+    width: 123px;
+}
+
+.review_product div.product_details {
+    flex-shrink: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+
+
+
+.icon span {
+    display: grid;
+    width: 55px;
+    height: 52px;
+    background: #ffd2d2;
+    place-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.icon span svg {
+    font-size: 1.5rem;
+    color: #f86262;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
